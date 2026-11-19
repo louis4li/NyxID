@@ -1,0 +1,12 @@
+name: PR 2723 full backend verification
+on:
+  push:
+    branches:
+      - feature/2715-backend-verification-000139af3
+permissions:
+  contents: read
+jobs:
+  backend:
+    uses: ./.github/workflows/backend-tests.yml
+    with:
+      coverage: false
